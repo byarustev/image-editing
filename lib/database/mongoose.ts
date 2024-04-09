@@ -22,7 +22,7 @@ export const connectToDatabase = async () => {
 
     if (!MONGODB_URL) throw new Error('Mongodb url not defined')
 
-    cached.promise = cached.promise || mongoose.connect(MONGODB_URL, { dbName: 'admin', bufferCommands: false })
+    cached.promise = cached.promise || mongoose.connect(MONGODB_URL, { dbName: 'imagify', bufferCommands: false })
 
     cached.conn = await cached.promise // above promise will resolve into a connection
 
