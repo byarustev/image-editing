@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '@/components/shared/Header'
 import { transformationTypes } from '@/constants'
+import TransformationForm from '@/components/shared/TransformationForm'
 
 const AddTransformationTypePage = ({
     params: { type }
@@ -10,7 +11,7 @@ const AddTransformationTypePage = ({
     return (
         <>
             <Header title={transformation.title} subtitle={transformation.subTitle} />
-
+            <TransformationForm />
         </>
     )
 }
